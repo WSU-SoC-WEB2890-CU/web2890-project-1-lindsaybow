@@ -1,3 +1,118 @@
-/* Your styles go here */
+html{
+    font-size: 18px;
+}
+
+body{
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lily Script One', system-ui;
+    font-size: 2rem;
+}
+
+.text-body-emphasis{
+    font-size: 3.5rem;
+}
+
+p, a, li, .btn, .form-select, .form-control{
+    font-family: 'Lexend', sans-serif;
+}
+
+
+$primary: rgb(173, 0, 0);
+$secondary: rgba(249, 230, 230, 0.415);
+$warning: rgb(248, 229, 103);
+
+
+.jumbotron{
+    background-image: url("../images/beetle.jpg");
+    background-color: $primary;
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner{
+    background-image: url(../images/beetle2.jpg);
+    background-color: $primary;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn{
+    transition: 2s;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+  
+nav > ul > li > a:hover{
+    border-bottom: 4px solid $primary;
+    margin: 0;
+    padding: 0;
+}
+
+
+// Media Queries
+
+
+@media screen and (max-width: 768px){
+    .jumbotron, .banner{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar > .d-flex{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .card{
+        display: flex;
+    }
+
+    .card{
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    }
+}
+
+@media screen and (min-width: 577px){
+    .card-group{
+        display: flex;
+    }
+
+    .card{
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/2);
+    }
+   
+}
+
+@media screen and (min-width: 990px){
+    .card-group{
+        display: flex;
+    }
+
+    .card-group{
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    }
+
+}
+
+    
+
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
